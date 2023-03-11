@@ -1,12 +1,25 @@
-﻿string [] a= {"Cat","Dog","Bird","Snake"};
-void VivodArray (string[]a)
+﻿string[] a = { "Cat", "Dog", "Bird", "Snake", "Pig" };
+string[] b = new string[a.Length];
+void Zamena(string[] a, string[] b)
 {
-for (int i=0;i<a.Length;i++)
+    int count = 0;
+    for (int i = 0; i < a.Length; i++)
     {
-        if (a[i].Length<=3)
+        if (a[i].Length <= 3)
         {
-            System.Console.Write($" {a[i]} ");
+            b[count] = a[i];
+            count++;
         }
     }
 }
-VivodArray(a);
+void PrintArray(string[] a)
+{
+    for (int i = 0; i < a.Length; i++)
+    {
+        Console.Write($"{a[i]} ");
+    }
+    Console.WriteLine();
+}
+Zamena(a, b);
+PrintArray(b);
+
